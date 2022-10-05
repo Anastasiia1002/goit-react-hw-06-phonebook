@@ -6,7 +6,7 @@ import s from '../app.module.css';
 const Filter = () => {
   const dispatch = useDispatch();
   const filterName = useSelector(state => state.filter);
-  console.log(filterName);
+
   const handleFilterChange = event => {
     dispatch(filterContacts(event.target.value));
   };

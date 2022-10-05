@@ -16,33 +16,13 @@ import contactsFilterReducer from './filterSlice';
 const persistContactsList = {
   key: 'contactsList',
   version: 1,
-  //   whitelist: [contacts],
-  //   blacklist: ['filter'],
   storage,
 };
-// const persistFilter = {
-//   key: 'filter',
-//   version: 1,
-//   //   whitelist: [contacts],
-//   //   blacklist: ['filter'],
-//   storage,
-// };
-
-// const myReducer = createReducer(0, {
-//   contacts: {
-//     name: '',
-//     number: '',
-//   },
-// });
 
 const persistContactsListReducer = persistReducer(
   persistContactsList,
   ontactsListReducer
 );
-// const persistContactsFilterReducer = persistReducer(
-//   persistFilter,
-//   contactsFilterReducer
-// );
 
 export const store = configureStore({
   reducer: {

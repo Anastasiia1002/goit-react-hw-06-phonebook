@@ -7,7 +7,7 @@ const ContactList = () => {
   const filterName = useSelector(state => state.filter);
   const contacts = useSelector(state => state.contactsList.contacts);
   const dispatch = useDispatch();
-  console.log(filterName);
+ 
   const filterContacts = () => {
     if (filterName.length > 0) {
       const filterLow = filterName.toLowerCase().trim();

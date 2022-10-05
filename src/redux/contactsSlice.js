@@ -14,8 +14,6 @@ const contactsListSlice = createSlice({
   initialState,
   reducers: {
     addContact(state, { payload }) {
-      console.log(payload);
-      //   console.log(current(state.contacts));
       //   return {
       //     ...state,
       //     contacts: [...state.contacts, payload],
@@ -24,22 +22,14 @@ const contactsListSlice = createSlice({
     },
     removeContacts(state, { payload }) {
       return state.filter(el => el.id !== payload);
-      //   console.log(payload);
-      //   console.log(state);
-      //   state.contacts = state.contacts.filter(el => el.id !== payload);
     },
   },
 });
 
-// const contactsListReducer = contactsListSlice.reducer;
 const contactsListActions = contactsListSlice.actions;
-// export default contactsListReducer;
-// export const contactsFilterReducer = contactsFilterSlice.reducer;
-// const contactsFilterActions = contactsFilterSlice.actions;
 export const { addContact, removeContacts } = contactsListActions;
-// export const { filterContacts } = contactsFilterActions;
+
 const contactsReducer = combineReducers({
   [contactsListSlice.name]: contactsListSlice.reducer,
-  //   [contactsFilterSlice.name]: contactsFilterSlice.reducer,
 });
 export default contactsReducer;

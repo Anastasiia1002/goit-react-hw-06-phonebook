@@ -42,7 +42,6 @@ function ContactForm() {
       number,
     };
     dispatch(addContact(contact));
-    console.log(contacts);
   };
 
   const reset = () => {
